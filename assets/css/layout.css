@@ -1,0 +1,26 @@
+#app {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Substituição proporcional */
+  gap: 1.25rem;
+
+  height: 100vh;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.aside-container {
+  /* Ocupa toda a altura da tela e não rola */
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-container {
+  background-color: var(--shape-body);
+  padding: 1.25rem;
+
+  /* Scroll apenas aqui */
+  height: 100%;
+  overflow-y: auto;
+}

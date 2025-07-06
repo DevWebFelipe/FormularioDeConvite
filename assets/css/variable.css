@@ -1,5 +1,5 @@
 :root {
-  /* colors */
+  /* cores */
   --brand-light: #59b2ff;
   --brand-mid: #3487cf;
   --brand-dark: #1d6fb6;
@@ -28,7 +28,7 @@
   --text-color-body: #c8cdd0;
   --text-color-heading: #f9f9f9;
 
-  /* fonts */
+  /* fontes */
   --font-logo: "Leckerli One", sans-serif;
   --font-title: "Baloo 2", sans-serif;
   --font-body: "Open Sans", sans-serif;

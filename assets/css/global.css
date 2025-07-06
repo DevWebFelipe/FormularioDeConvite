@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden; /* evita rolagem da página */
+  font: var(--text-md);
+  color: var(--text-secondary);
+  background-color: var(--shape-background);
+  color: var(--text-color-heading);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
