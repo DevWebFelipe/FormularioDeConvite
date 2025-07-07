@@ -9,10 +9,29 @@ body {
   font: var(--text-md);
   color: var(--text-secondary);
   background-color: var(--shape-background);
-  color: var(--text-color-heading);
+  color: var(--text-color-body);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-no-gap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
 }

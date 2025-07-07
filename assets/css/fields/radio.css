@@ -1,0 +1,79 @@
+.radio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 8px;
+  padding: 4px;
+  width: 100%;
+  min-height: 50px;
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid var(--brand-light);
+  }
+}
+
+.radio-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 0 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  color: var(--text-color-body);
+  font-weight: 400;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+  & label {
+    margin: 0;
+  }
+
+  &:has(:checked) {
+    border: 2px solid var(--stroke-highlight);
+  }
+}
+
+.radio-inner input {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.radio-inner .radio-image {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Ícones cinza padrão */
+.in-person {
+  background-image: url("../../icon/building-gray.svg");
+}
+
+.online {
+  background-image: url("../../icon/video-gray.svg");
+}
+
+/* Estilo de item selecionado */
+.radio-inner:has(input:checked) {
+  background-color: var(--input-stroke);
+  color: var(--text-color-heading);
+  font-weight: 600;
+}
+
+/* Ícones azuis se selecionado */
+.radio-inner:has(input:checked) .in-person {
+  background-image: url("../../icon/building-blue.svg");
+}
+
+.radio-inner:has(input:checked) .online {
+  background-image: url("../../icon/video-blue.svg");
+}
