@@ -74,3 +74,23 @@
 .radio-inner:has(input:checked) .online {
   background-image: url("../../icon/video-blue.svg");
 }
+
+.color-option img {
+  border: 6px solid var(--shape-button);
+  border-radius: 50%;
+}
+
+.color-option:hover {
+  & img {
+    border: 6px solid var(--shape-hover);
+    border-radius: 50%;
+  }
+}
+
+.radio-inner:has(input:checked) .color-option {
+  & img {
+    box-shadow: 0 0 0 2px #00f;
+    border: 6px solid var(--shape-hover);
+    border-radius: 50%;
+  }
+}
