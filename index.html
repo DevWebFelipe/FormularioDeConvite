@@ -13,6 +13,7 @@
     />
 
     <link rel="stylesheet" href="assets/css/index.css" />
+    <script src="assets/js/index.js"></script>
   </head>
   <body>
     <div id="app">
@@ -138,13 +139,13 @@
               <div class="input-grid">
                 <label for="colors">Cor principal</label>
 
-                <div class="radio-grid">
+                <div class="radio-grid-color">
                   <label class="radio-inner color-option" for="brand-light">
                     <input
                       type="radio"
                       name="colors"
                       value="brand-light"
-                      id="brand-light"
+                      id="colors"
                       checked
                     />
 
@@ -156,7 +157,12 @@
                   </label>
 
                   <label class="radio-inner color-option" for="navy">
-                    <input type="radio" name="colors" value="navy" id="navy" />
+                    <input
+                      type="radio"
+                      name="colors"
+                      value="navy"
+                      id="colors"
+                    />
                     <img
                       class="radio-img"
                       src="assets/icon/color/2.svg"
@@ -169,7 +175,7 @@
                       type="radio"
                       name="colors"
                       value="purple"
-                      id="purple"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/3.svg" />
                   </label>
@@ -179,13 +185,18 @@
                       type="radio"
                       name="colors"
                       value="fuschia"
-                      id="fuschia"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/4.svg" />
                   </label>
 
                   <label class="radio-inner color-option" for="pink">
-                    <input type="radio" name="colors" value="pink" id="pink" />
+                    <input
+                      type="radio"
+                      name="colors"
+                      value="pink"
+                      id="colors"
+                    />
                     <img class="radio-img" src="assets/icon/color/5.svg" />
                   </label>
 
@@ -194,7 +205,7 @@
                       type="radio"
                       name="colors"
                       value="danger"
-                      id="danger"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/6.svg" />
                   </label>
@@ -204,7 +215,7 @@
                       type="radio"
                       name="colors"
                       value="orange"
-                      id="orange"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/7.svg" />
                   </label>
@@ -214,13 +225,18 @@
                       type="radio"
                       name="colors"
                       value="yellow"
-                      id="yellow"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/8.svg" />
                   </label>
 
                   <label class="radio-inner color-option" for="lime">
-                    <input type="radio" name="colors" value="lime" id="lime" />
+                    <input
+                      type="radio"
+                      name="colors"
+                      value="lime"
+                      id="colors"
+                    />
                     <img class="radio-img" src="assets/icon/color/9.svg" />
                   </label>
 
@@ -229,15 +245,185 @@
                       type="radio"
                       name="colors"
                       value="green"
-                      id="green"
+                      id="colors"
                     />
                     <img class="radio-img" src="assets/icon/color/10.svg" />
                   </label>
 
                   <label class="radio-inner color-option" for="cyan">
-                    <input type="radio" name="colors" value="cyan" id="cyan" />
+                    <input
+                      type="radio"
+                      name="colors"
+                      value="cyan"
+                      id="colors"
+                    />
                     <img class="radio-img" src="assets/icon/color/11.svg" />
                   </label>
+                </div>
+              </div>
+
+              <div class="input-grid">
+                <label for="theme">Tema do evento</label>
+
+                <div class="radio-grid-theme">
+                  <label class="radio-inner" for="birthday">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="birthday"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/1.png" />
+                    <span>Aniversário</span>
+                  </label>
+
+                  <label class="radio-inner" for="childish">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="childish"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/2.png" />
+                    <span>Infantil</span>
+                  </label>
+
+                  <label class="radio-inner" for="graduation">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="graduation"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/3.png" />
+                    <span>Formatura</span>
+                  </label>
+
+                  <label class="radio-inner" for="wedding">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="wedding"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/4.png" />
+                    <span>Casamento</span>
+                  </label>
+
+                  <label class="radio-inner" for="baby-shower">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="baby-shower"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/5.png" />
+                    <span>Chá de bebê</span>
+                  </label>
+
+                  <label class="radio-inner" for="kitchen-shower">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="kitchen-shower"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/6.png" />
+                    <span>Chá de panela</span>
+                  </label>
+
+                  <label class="radio-inner" for="carnival">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="carnival"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/7.png" />
+                    <span>Carnaval</span>
+                  </label>
+
+                  <label class="radio-inner" for="easter">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="easter"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/8.png" />
+                    <span>Páscoa</span>
+                  </label>
+
+                  <label class="radio-inner" for="saint-john">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="saint-john"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/9.png" />
+                    <span>São João</span>
+                  </label>
+
+                  <label class="radio-inner" for="halloween">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="halloween"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/10.png" />
+                    <span>Halloween</span>
+                  </label>
+
+                  <label class="radio-inner" for="christmas">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="christmas"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/11.png" />
+                    <span>Natal</span>
+                  </label>
+
+                  <label class="radio-inner" for="another">
+                    <input
+                      type="radio"
+                      name="theme"
+                      value="another"
+                      id="theme"
+                    />
+                    <img class="radio-img" src="assets/icon/theme/12.png" />
+                    <span>Outro</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="input-grid">
+                <div class="grid-customization">
+                  <div class="theme-switch">
+                    <label for="theme">Tema</label>
+                    <div class="theme">
+                      <div class="switch-button">
+                        <div class="switch-option"></div>
+                      </div>
+                      <span class="dark">Escuro</span>
+                      <span class="light">Claro</span>
+                    </div>
+                  </div>
+
+                  <div class="coluna-2">
+                    <div class="input-wrapper">
+                      <label for="title">Titulo</label>
+                      <input
+                        id="title"
+                        name="title"
+                        type="search"
+                        placeholder="Título do evento"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </fieldset>

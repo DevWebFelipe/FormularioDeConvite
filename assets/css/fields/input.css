@@ -17,6 +17,18 @@ select {
   }
 }
 
+.input-grid {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font: var(--text-md);
+  color: var(--text-color-body);
+  border: 1px solid var(--shape-body);
+
+  & label {
+    padding-bottom: 0;
+  }
+}
+
 .radio-wrapper {
   border: 1px solid var(--input-stroke);
   padding: 0;
