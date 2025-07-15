@@ -2,7 +2,8 @@
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 0.5rem;
+  gap: 1.25rem;
+  justify-content: space-between;
 
   & .radio-inner {
     padding: 0;
