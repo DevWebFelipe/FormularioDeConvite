@@ -1,3 +1,14 @@
+.radio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 0.5rem;
+
+  & .radio-inner {
+    padding: 0;
+  }
+}
+
 .radio-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -87,9 +98,15 @@
   }
 }
 
-.radio-inner:has(input:checked) .color-option {
+.radio-grid .radio-inner {
+  justify-content: center;
+}
+
+.radio-grid .radio-inner:has(input:checked) {
+  background-color: var(--shape-body);
+
   & img {
-    box-shadow: 0 0 0 2px #00f;
+    box-shadow: 0 0 0 2px var(--brand-light);
     border: 6px solid var(--shape-hover);
     border-radius: 50%;
   }
