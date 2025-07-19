@@ -1,6 +1,10 @@
-const label = document.querySelector(".theme-label")
-const radioLight = document.getElementById("theme-light")
-const radioDark = document.getElementById("theme-dark")
+const toggle = document.getElementById("theme-toggle")
+const label = document.getElementById("theme-label")
 
-radioLight.addEventListener("change", () => (label.textContent = "Claro"))
-radioDark.addEventListener("change", () => (label.textContent = "Escuro"))
+toggle.addEventListener("change", () => {
+  label.textContent = toggle.checked ? "Claro" : "Escuro"
+
+  // Aqui você pode salvar o estado no backend ou numa variável:
+  const temaEvento = toggle.checked ? "claro" : "escuro"
+  console.log("Tema do evento:", temaEvento)
+})

@@ -32,3 +32,13 @@
     display: none;
   }
 }
+
+#toogle {
+  width: 176px;
+
+  & .radio-wrapper {
+    padding: 0;
+    border: none;
+    background-color: var(--input-body);
+  }
+}

@@ -3,7 +3,7 @@
 
   grid-template-columns: repeat(auto-fit, minmax(134px, 1fr));
 
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: space-between;
 
   & .radio-inner {
@@ -15,7 +15,7 @@
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 1.25rem;
+  gap: 0.75rem;
   justify-content: space-between;
 
   & .radio-inner {
@@ -47,6 +47,7 @@
   height: auto;
   padding: 0 1rem;
   border-radius: 6px;
+  max-width: 134px;
   cursor: pointer;
   position: relative;
   color: var(--text-color-body);
