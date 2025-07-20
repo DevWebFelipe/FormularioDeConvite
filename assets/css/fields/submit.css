@@ -1,0 +1,24 @@
+#submit {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit button {
+  display: flex;
+  height: 3rem;
+  font: var(--text-md-sb);
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--brand-dark);
+  color: var(--text-color-heading);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#submit button img {
+  width: 20px;
+  height: 20px;
+}

@@ -57,7 +57,7 @@ select:focus {
 
 label {
   color: var(--text-color-body);
-  font: --text-sm;
+  font: var(--text-sm);
 
   display: block;
   margin-bottom: 0.75rem;
@@ -148,4 +148,19 @@ input[type="datetime-local"] {
 .flex .input-grid {
   padding-block: 0;
   padding-inline: 0;
+}
+
+.error {
+  color: var(--danger);
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font: var(--text-xs);
+}
+
+.input-wrapper.error input,
+.input-wrapper.error textarea,
+.input-wrapper.error select {
+  border: 1px solid var(--danger);
 }
