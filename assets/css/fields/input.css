@@ -66,6 +66,7 @@ label {
 input[type="datetime-local"] {
   position: relative;
   color: var(--input-placeholder);
+  text-transform: uppercase;
 
   &::-webkit-calendar-picker-indicator {
     opacity: 0;
@@ -152,11 +153,17 @@ input[type="datetime-local"] {
 
 .error {
   color: var(--danger);
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
   font: var(--text-xs);
+  font-size: 0.85rem;
+
+  & img {
+    width: 1rem;
+    height: 100%;
+  }
 }
 
 .input-wrapper.error input,

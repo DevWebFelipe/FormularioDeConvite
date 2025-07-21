@@ -4,26 +4,84 @@ const label = document.getElementById("theme-label")
 toggle.addEventListener("change", () => {
   label.textContent = toggle.checked ? "Claro" : "Escuro"
 
-  // Aqui você pode salvar o estado no backend ou numa variável:
   const temaEvento = toggle.checked ? "claro" : "escuro"
   console.log("Tema do evento:", temaEvento)
 })
 
 document
-  .getElementById("form-teste")
+  .getElementById("event-form")
   .addEventListener("submit", function (event) {
     event.preventDefault() // Impede o envio real
 
-    // Simulação de validação
-    const checkboxObrigatorio = document.querySelector(
-      'input[type="checkbox"]:checked'
+    // Pega todos os inputs obrigatórios
+    const requiredFields = document.querySelectorAll(
+      "#event-form input[required], #event-form textarea[required]"
+    )
+    let formIsValid = true
+
+    requiredFields.forEach((input) => {
+      const wrapper = input.closest(".input-wrapper")
+      const errorDiv = wrapper.querySelector(".error")
+
+      if (!input.value.trim()) {
+        // Mostra erro
+        errorDiv.style.display = "flex"
+        formIsValid = false
+      } else {
+        // Oculta erro
+        errorDiv.style.display = "none"
+      }
+    })
+
+    // Verifica checkboxes obrigatórios
+    const checkboxesObrigatorios = document.querySelectorAll(
+      '.checkbox-wrapper input[type="checkbox"].required'
     )
 
-    if (!checkboxObrigatorio) {
-      alert("Você precisa aceitar os termos para continuar.")
-      return
-    }
+    checkboxesObrigatorios.forEach((checkbox) => {
+      const wrapper = checkbox.closest(".checkbox-wrapper")
+      const errorDiv = wrapper.querySelector(".error")
 
-    alert("Formulário enviado com sucesso! (simulação)")
-    // Aqui você pode prosseguir com seu código de envio (fetch, etc.)
+      if (!checkbox.checked) {
+        errorDiv.style.display = "flex"
+        formIsValid = false
+      } else {
+        errorDiv.style.display = "none"
+      }
+    })
+
+    if (formIsValid) {
+      alert("Formulário enviado com sucesso! (simulação)")
+      // Aqui você pode fazer o envio via fetch, etc.
+    }
   })
+
+const requiredFields = document.querySelectorAll(
+  "#event-form input[required], #event-form textarea[required]"
+)
+
+requiredFields.forEach((input) => {
+  input.addEventListener("input", () => {
+    const wrapper = input.closest(".input-wrapper")
+    const errorDiv = wrapper.querySelector(".error")
+
+    if (input.value.trim()) {
+      errorDiv.style.display = "none"
+    }
+  })
+})
+
+const checkboxesObrigatorios = document.querySelectorAll(
+  '.checkbox-wrapper input[type="checkbox"].required'
+)
+
+checkboxesObrigatorios.forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    const wrapper = checkbox.closest(".checkbox-wrapper")
+    const errorDiv = wrapper.querySelector(".error")
+
+    if (checkbox.checked) {
+      errorDiv.style.display = "none"
+    }
+  })
+})

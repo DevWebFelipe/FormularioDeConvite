@@ -10,15 +10,21 @@
   font: var(--text-md-sb);
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--brand-dark);
+  background-color: var(--shape-button);
   color: var(--text-color-heading);
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--brand-dark);
+    color: var(--text-color-heading);
+  }
 }
 
 #submit button img {
   width: 20px;
   height: 20px;
+  src: url("../../icon/ticket.svg");
 }
