@@ -3,6 +3,7 @@ textarea {
 }
 
 input,
+file,
 textarea,
 select {
   appearance: none;
@@ -170,4 +171,9 @@ input[type="datetime-local"] {
 .input-wrapper.error textarea,
 .input-wrapper.error select {
   border: 1px solid var(--danger);
+}
+
+.error#error-terms {
+  margin-bottom: 1rem;
+  margin-top: 0;
 }

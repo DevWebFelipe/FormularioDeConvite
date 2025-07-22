@@ -1,0 +1,36 @@
+.file-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  & img {
+    width: 1rem;
+    height: 100%;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-button {
+  background-color: var(--shape-button);
+  color: var(--text-color-heading);
+  padding: 0.5rem 1rem;
+  font: var(--text-sm);
+  margin-bottom: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background-color: var(--brand-dark);
+  }
+}
+
+.file-name {
+  color: #aaa;
+  font-size: 14px;
+}

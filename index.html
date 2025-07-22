@@ -539,14 +539,19 @@
                 </div>
 
                 <!-- Aqui tem que transformar em um botão de procura para dicionar um arquivo -->
+
                 <div class="input-wrapper flex-1">
-                  <label for="cover-photo">Foto de capa</label>
-                  <input
-                    id="cover-photo"
-                    name="cover-photo"
-                    type="file"
-                    required
-                  />
+                  <label for="arquivo">Foto de capa</label>
+
+                  <div class="file-container">
+                    <input type="file" id="arquivo" name="arquivo" required />
+                    <label for="arquivo" class="file-button">
+                      <img src="assets/icon/upload.svg" alt="" />
+                      Selecionar
+                    </label>
+                    <span class="file-name">Nenhum arquivo selecionado</span>
+                  </div>
+
                   <div class="error">
                     <img
                       src="assets/icon/circle-alert.svg"
@@ -628,7 +633,7 @@
 
               <label class="terms-wrapper input-wrapper checkbox-wrapper">
                 <div class="checkbox-image"></div>
-                <input type="checkbox" name="terms" id="terms" />
+                <input type="checkbox" name="terms" id="terms" required />
                 <span
                   >Li e concordo com os <strong>Termos e Condições</strong> e
                   com a <strong>Política de Privacidade</strong></span

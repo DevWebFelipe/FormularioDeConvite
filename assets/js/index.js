@@ -85,3 +85,30 @@ checkboxesObrigatorios.forEach((checkbox) => {
     }
   })
 })
+
+const fileInput = document.getElementById("arquivo")
+const fileNameDisplay = document.querySelector(".file-name")
+const fileError = document.querySelector(".error")
+
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0]
+
+  if (file) {
+    fileNameDisplay.textContent = file.name
+    fileError.style.display = "none"
+  } else {
+    fileNameDisplay.textContent = "Nenhum arquivo selecionado"
+  }
+})
+
+// Validação no submit
+document.getElementById("event-form").addEventListener("submit", function (e) {
+  e.preventDefault()
+
+  if (!fileInput.files.length) {
+    fileError.style.display = "block"
+    return
+  }
+
+  alert("Arquivo enviado (simulação)!")
+})
