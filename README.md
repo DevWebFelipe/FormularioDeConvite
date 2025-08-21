@@ -46,7 +46,7 @@ como **Live Server** no VS Code para visualizar em tempo real.
     ├── assets/           # Imagens, fontes ou recursos estáticos
     └── index.html        # Página principal com o formulário
 
-## Sugestões de melhorias
+## Melhorias futuras
 
 -   Adicionar validação avançada (ex: e‑mail, data)
 -   Permitir download ou impressão do convite gerado
